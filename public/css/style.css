@@ -1,0 +1,17 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a:link,a:visited{text-decoration: none; color: #000;}
+.clearfix:after{
+    content:''; display: block; clear:both;
+}
+h1{text-align: center;}
+ul.gnb li{float: left;width: calc(100% /3); text-align: center;}
+ul.gnb li:hover {background:HOTpink;}
+ul.gnb li a {display: block; line-height: 40px;}
+
+.router-link-active {background: pink;}
+
+footer.footer{
+    background: #ccc;
+    padding: 20px;
+}
