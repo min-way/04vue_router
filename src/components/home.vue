@@ -1,6 +1,6 @@
 <template>
  
-  <swiper :pagination="true" class="mySwiper mb-5">
+  <swiper :pagination="true" :autoplay="true" class="mySwiper mb-5">
     <swiper-slide><img src="image/banner01.jpg" alt=""></swiper-slide>
     <swiper-slide><img src="image/banner02.jpg" alt=""></swiper-slide>
     <swiper-slide><img src="image/banner03.jpg" alt=""></swiper-slide>
@@ -14,7 +14,7 @@
       <div class="row mb-5">
         <div class="col-sm-6 col-md-3" v-for="(item,i) in 4" :key="i">
           <img :src="pdata[i].image" alt="" class="w-100">
-          <p class="mb-0">{{pdata[i].title}}</p>
+          <p class="mb-0" @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}}</p>
           <p class="mb-0">{{pdata[i].price.toLocaleString()}}원</p>
           <p class="text-black-50">{{pdata[i].content}}</p>
         </div>
@@ -32,11 +32,11 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/swiper.scss';
 import "swiper/components/pagination/pagination.min.css"
 import SwiperCore, {
-  Pagination
+  Pagination, Autoplay
 } from 'swiper/core';
 
 // install Swiper modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Autoplay]);
 
 export default {
   props:['pdata'],
@@ -44,6 +44,7 @@ export default {
     Swiper,
     SwiperSlide,
   },
+  
 }
 </script>
 
