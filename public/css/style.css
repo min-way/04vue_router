@@ -5,13 +5,14 @@ a:link,a:visited{text-decoration: none; color: #000;}
     content:''; display: block; clear:both;
 }
 h1{text-align: center;}
-ul.gnb li{float: left;width: calc(100% /3); text-align: center;}
-ul.gnb li:hover {background:HOTpink;}
-ul.gnb li a {display: block; line-height: 40px;}
+ul.gnb li:hover {background:skyblue}
+ul.gnb li a {display: block; line-height: 30px;}
 
-.router-link-active {background: pink;}
+.router-link-active {background:powderblue;}
 
 footer.footer{
     background: #ccc;
     padding: 20px;
+    font-size: 14px;
 }
+footer.footer > div:nth-child(1) a img {height: 40px;}

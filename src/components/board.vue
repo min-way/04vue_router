@@ -8,10 +8,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(board,i) in bdata" :key="i">
+        <tr v-for="(board,i) in bdata" :key="i" class="cursor">
           <th scope="row">{{bdata[i].idx + 1}}</th>
           <td>{{bdata[i].title}}</td>
-          <td>{{bdata[i].date}}</td>
+          <td class="text-center">{{bdata[i].date}}</td>
         </tr>
       </tbody>
     </table>

@@ -10,17 +10,17 @@
   <div class="best">
     <div class="container">
       <h2>BEST</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p>지금 가장 인기 있는 아이템!</p>
       <div class="row mb-5">
-        <div class="col-sm-6 col-md-3" v-for="(item,i) in 4" :key="i">
+        <div class="col-sm-6 col-md-3 cursor" v-for="(item,i) in 4" :key="i" @click="$emit('pOpen',pdata[i].id)">
           <img :src="pdata[i].image" alt="" class="w-100">
-          <p class="mb-0" @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}}</p>
+          <p class="mb-0">{{pdata[i].title}}</p>
           <p class="mb-0">{{pdata[i].price.toLocaleString()}}원</p>
           <p class="text-black-50">{{pdata[i].content}}</p>
         </div>
       </div>
-      <div class="btn btn-primary d-block mx-auto mb-5" style="width:100px">
-          <router-link to="/product">more</router-link>
+      <div class="btn btn-secondary d-block mx-auto mb-5" style="width:100px">
+          <router-link class="text-white" to="/product">MORE</router-link>
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@ export default {
   height: 100%;
   object-fit: cover;
 }
-
+.cursor {cursor: pointer;}
 .best h2 {text-align: center;}
 .best h2:after {content: ''; width: 30px; height: 1px; display: block; background: #333; margin: 10px auto;}
 .best p {text-align: center;}

@@ -2,11 +2,11 @@
   <div class="product">
     <div class="container">
       <h2>PRODUCT</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p>남자의 자신감을 높여주는 SUIT SHOP만의 옷</p>
       <div class="row mb-5">
-          <div class="col-sm-6 col-md-3" v-for="(item,i) in pdata" :key="i">
+          <div class="cursor col-sm-6 col-md-3" v-for="(item,i) in pdata" :key="i"  @click="$emit('pOpen',pdata[i].id)">
             <img :src="pdata[i].image" alt="" class="w-100">
-            <p class="mb-0" @click="$emit('pOpen',pdata[i].id)">{{pdata[i].title}}</p>
+            <p class="mb-0">{{pdata[i].title}}</p>
             <p class="mb-0">{{pdata[i].price.toLocaleString()}}원</p>
             <p class="text-black-50">{{pdata[i].content}}</p>
           </div>
