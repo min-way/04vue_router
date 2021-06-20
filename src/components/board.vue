@@ -1,4 +1,7 @@
 <template>
+    <div class="text-center py-5">
+      <h2>NEWS AND NOTICE</h2>
+    </div>
     <table class="table table-hover">
       <thead>
         <tr>
@@ -15,7 +18,7 @@
         </tr>
       </tbody>
     </table>
-    <div class="text-center">
+    <div class="text-center py-4">
       <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
           <li class="page-item disabled">
