@@ -9,16 +9,13 @@
     <pop-up :pdata="pdata" :pView="pView" :pNum="pNum" @pClose="pView=false" />
     
   </transition>
-  <transition>
-    <board-modal :bdata="bdata" :bView="bView" :bNum="bNum" @bClose="bView=false" />
-  </transition>
+
 </template>
 
 <script>
 import header from './components/header.vue'
 import footer from './components/footer.vue'
 import pPop from './components/pPop.vue'
-import bModal from './components/bModal.vue'
 import pdata from './pdata.js'
 import bdata from './bdata.js'
 
@@ -28,7 +25,6 @@ export default {
     'top-header':header,
     'bottom-footer':footer,
     'pop-up':pPop,
-    'board-modal':bModal,
   },
   data(){
     return{

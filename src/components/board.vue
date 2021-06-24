@@ -10,13 +10,25 @@
           <th scope="col" class="text-center">날짜</th>
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="(board,i) in bdata" :key="i" class="cursor">
+      <tbody id="accordion">
+        <tr v-for="(board,i) in bdata" :key="i" class="cursor" data-toggle="collapse" :data-target="'#board'+i">
           <th scope="row">{{bdata[i].idx + 1}}</th>
           <td>{{bdata[i].title}}</td>
           <td class="text-center">{{bdata[i].date}}</td>
+          
+         <!-- <td class="collapse boardContent" :id="'board'+i" data-parent="#accordion">
+          <div class="boardContent" :id="'board'+i">
+            {{bdata[i].content}}
+          </div>
+        </td> -->
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div id="accordion" class="collapse">Hidden by default</div>
+            </td>
         </tr>
       </tbody>
+      
     </table>
     <div class="text-center py-4">
       <nav aria-label="Page navigation example">
@@ -31,6 +43,7 @@
         </ul>
       </nav>
     </div>
+
 </template>
 
 <script>
@@ -42,5 +55,6 @@ export default {
 </script>
 
 <style>
-
+  
+  .boardContent {padding: 20px; }
 </style>
