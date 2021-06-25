@@ -15,18 +15,8 @@
           <th scope="row">{{bdata[i].idx + 1}}</th>
           <td>{{bdata[i].title}}</td>
           <td class="text-center">{{bdata[i].date}}</td>
-          
-         <!-- <td class="collapse boardContent" :id="'board'+i" data-parent="#accordion">
-          <div class="boardContent" :id="'board'+i">
-            {{bdata[i].content}}
-          </div>
-        </td> -->
         </tr>
-        <tr>
-            <td colspan="3">
-                <div id="accordion" class="collapse">Hidden by default</div>
-            </td>
-        </tr>
+        
       </tbody>
       
     </table>

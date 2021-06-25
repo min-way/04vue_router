@@ -7,7 +7,6 @@
   
   <transition name="show" class="show">
     <pop-up :pdata="pdata" :pView="pView" :pNum="pNum" @pClose="pView=false" />
-    
   </transition>
 
 </template>
@@ -51,7 +50,6 @@ li{list-style: none;}
 .show-enter-from, .show-leave-to  {opacity: 0;}
 .show-enter-active, .show-leave-active {transition:.3s}
 .show-enter-to, .show-leave-from {opacity: 1;}
-
 
 @media screen and (min-width:900px){
   .pPop {width: 600px;}
