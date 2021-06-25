@@ -1,5 +1,6 @@
 <template>
   <div v-if="pView==true">
+    <div class="bg" @click="$emit('pClose')"></div>
     <div class="pPop text-center">
       <img :src="pdata[pNum].image" alt="" class="w-100 mb-2">
       <p class="mb-2">{{pdata[pNum].title}}</p>

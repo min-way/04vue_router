@@ -11,12 +11,11 @@
         </tr>
       </thead>
       <tbody id="accordion">
-        <tr v-for="(board,i) in bdata" :key="i" class="cursor" data-toggle="collapse" :data-target="'#board'+i">
+        <tr v-for="(board,i) in bdata" :key="i" @click="$emit('bOpen',bdata[i].idx)" class="cursor">
           <th scope="row">{{bdata[i].idx + 1}}</th>
           <td>{{bdata[i].title}}</td>
           <td class="text-center">{{bdata[i].date}}</td>
         </tr>
-        
       </tbody>
       
     </table>
@@ -40,11 +39,9 @@
 export default {
   name:'board',
   props:['bdata'],
-  
 }
 </script>
 
 <style>
-  
-  .boardContent {padding: 20px; }
+
 </style>
