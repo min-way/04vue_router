@@ -8,7 +8,7 @@
         </ul>
       </nav> -->
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="./">SUIT SHOP</a>
+        <a class="navbar-brand" href="./">꿈이야기</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,8 +29,8 @@ export default {
   data(){
     return{
       menu:[
-        {title:'HOME',link:'/'},
-        {title:'PRODUCT',link:'/product'},
+        {title:'처음으로',link:'/'},
+        {title:'카카오채널 추가',link:'/product'},
         {title:'BOARD',link:'/board'},
       ]
     }
